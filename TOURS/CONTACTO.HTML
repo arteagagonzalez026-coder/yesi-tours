@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto | Yesi Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #2f4156;
+            --sky-blue: #c8d9e6;
+            --pale-pink: #ffe1e6;
+            --azalea: #f7c9d4;
+            --beige: #f5efeb;
+            /* Colores de redes sociales */
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+            --facebook-blue: #1877F2;
+            --facebook-dark: #0056b3;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--beige) !important;
+            padding-top: 110px;
+        }
+
+        /* Navbar */
+        .bg-rosa {
+            background-color: var(--azalea) !important;
+        }
+
+        .nav-link {
+            color: var(--navy) !important;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            background-color: var(--navy);
+            border-radius: 5px;
+        }
+
+        .seccion-centrada {
+            width: 95%;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* --- Grid de Redes Sociales --- */
+        .redes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 576px) {
+            .redes {
+                grid-template-columns: 1fr 1fr;
+            }
+            .difusion {
+                grid-column: span 2;
+            }
+        }
+
+        .boton-redes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white !important; /* Forzamos blanco para los degradados */
+            transition: 0.3s;
+            height: 100%;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Degradados para botones de redes */
+        .difusion, .contacto-directo {
+            background: linear-gradient(135deg, var(--whatsapp-green) 0%, var(--whatsapp-dark) 100%);
+        }
+
+        .facebook {
+            background: linear-gradient(135deg, var(--facebook-blue) 0%, var(--facebook-dark) 100%);
+        }
+
+        .boton-redes:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            filter: brightness(1.05);
+            color: white !important;
+        }
+
+        /* Mapa responsivo */
+        .tarjeta-mapa {
+            background: white;
+            border: 2px solid var(--sky-blue);
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+
+        .mapa-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: var(--sky-blue);
+        }
+
+        .mapa-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            background-color: var(--navy);
+            color: var(--pale-pink);
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .btn-volver {
+            border: 2px solid var(--navy);
+            color: var(--navy);
+            transition: 0.3s;
+        }
+
+        .btn-volver:hover {
+            background-color: var(--navy);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-rosa shadow-sm fixed-top">
+        <div class="container px-4">
+            <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="index.html" style="color: var(--navy);">
+                <img src="IMGS/1.png" alt="Logo" width="45" height="45"
+                    class="me-2 rounded-circle border border-2 border-white shadow-sm">
+                YESI <span class="fw-light">TOURS</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto gap-2 text-center mt-3 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold px-3 text-uppercase small opacity-75" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold px-3 text-uppercase small opacity-75" href="index.html#VIAJES">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold px-3 text-uppercase small border-bottom border-2" 
+                           style="border-color: var(--navy) !important;" href="CONTACTO.HTML">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="seccion-centrada">
+        <h2 class="fw-bold mb-3" style="color: var(--navy);">¡Vámonos de viaje!</h2>
+        <p class="text-secondary">Estamos ready para ayudarte a planear tu próxima aventura.</p>
+
+        <div class="redes">
+            <a href="https://chat.whatsapp.com/Kjg0Kn7PxceJPDAjkYQ3In" class="boton-redes difusion" target="_blank">
+                <strong class="fs-5">CANAL DE DIFUSIÓN</strong>
+                <span class="small opacity-90">Entérate de nuestros próximos viajes</span>
+            </a>
+            <a href="https://www.facebook.com/share/18REcMKbYs/" class="boton-redes facebook" target="_blank">
+                <strong class="fs-5">NUESTRO FACEBOOK</strong>
+                <span class="small opacity-90">Mira lo mejor de nuestros tours</span>
+            </a>
+            <a href="https://wa.me/91167697689" class="boton-redes contacto-directo" target="_blank">
+                <strong class="fs-5">WHATSAPP DIRECTO</strong>
+                <span class="small opacity-90">Escríbenos para informes</span>
+            </a>
+        </div>
+
+
+        <div class="tarjeta-mapa shadow-sm">
+            <h5 class="fw-bold" style="color: var(--navy);">NUESTRA UBICACIÓN</h5>
+            <p class="small text-muted">Visítanos y te atenderemos con gusto</p>
+
+            <div class="mapa-container shadow-sm">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.655848600813!2d-97.8329621!3d22.2531393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d7f9ba57917227%3A0x6e902b175a983b6e!2sCBTis%20103!5e0!3m2!1ses-419!2smx!4v1711980000000!5m2!1ses-419!2smx"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <a href="index.html" class="btn btn-volver rounded-pill px-4 fw-bold shadow-sm">
+                ← VOLVER AL MENÚ PRINCIPAL
+            </a>
+        </div>
+    </div>
+
+
+    <footer class="text-center">
+        <p class="mb-0 fw-bold small">© 2026 Yesi Tours - Compras y Turismo.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

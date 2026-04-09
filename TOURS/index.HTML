@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Viajes | Yesi Tours</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #2f4156;
+            --sky-blue: #c8d9e6;
+            --pale-pink: #ffe1e6;
+            --azalea: #f7c9d4;
+            --beige: #f5efeb;
+            --ultra-light-pink: #fff5f7;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--beige) !important;
+        }
+
+        /* Navbar */
+        .bg-rosa {
+            background-color: var(--azalea) !important;
+        }
+
+        .nav-link {
+            color: var(--navy) !important;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            background-color: var(--navy);
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--pale-pink);
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Cards */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            border: none;
+            background-color: white;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(47, 65, 86, 0.2);
+        }
+
+        .card-footer {
+            background-color: var(--sky-blue);
+            border-top: none;
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        /* Buttons & Accents */
+        .text-vino {
+            color: var(--navy) !important;
+        }
+
+        .btn-vino {
+            background-color: var(--navy);
+            color: white;
+            border: none;
+            transition: background 0.3s;
+        }
+
+        .btn-vino:hover {
+            background-color: #1e2b3a;
+            color: var(--pale-pink);
+        }
+
+        .border-danger {
+            border-color: var(--azalea) !important;
+        }
+
+        /* Modal Customization */
+        .modal-header {
+            background-color: var(--navy) !important;
+        }
+
+        .carousel-indicators .active {
+            background-color: var(--navy);
+        }
+    </style>
+</head>
+
+<body id="INICIO">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-rosa shadow-sm fixed-top">
+        <div class="container px-4">
+            <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="index.html" style="color: var(--navy);">
+                <img src="IMGS/1.png" alt="Logo" width="45" height="45"
+                    class="me-2 rounded-circle border border-2 border-white shadow-sm">
+                YESI <span class="fw-light">TOURS</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto gap-2 text-center mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link fw-bold px-3 text-uppercase small opacity-75" href="#INICIO">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold px-3 text-uppercase small opacity-75" href="#VIAJES">Destinos</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold px-3 text-uppercase small opacity-75" href="CONTACTO.HTML">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="galeria-viajes" class="carousel slide vh-100 shadow" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#galeria-viajes" data-bs-slide-to="0" class="active rounded-circle" style="width: 10px; height: 10px;"></button>
+        <button type="button" data-bs-target="#galeria-viajes" data-bs-slide-to="1" class="rounded-circle" style="width: 10px; height: 10px;"></button>
+        <button type="button" data-bs-target="#galeria-viajes" data-bs-slide-to="2" class="rounded-circle" style="width: 10px; height: 10px;"></button>
+        <button type="button" data-bs-target="#galeria-viajes" data-bs-slide-to="3" class="rounded-circle" style="width: 10px; height: 10px;"></button>
+        <button type="button" data-bs-target="#galeria-viajes" data-bs-slide-to="4" class="rounded-circle" style="width: 10px; height: 10px;"></button>
+        <button type="button" data-bs-target="#galeria-viajes" data-bs-slide-to="5" class="rounded-circle" style="width: 10px; height: 10px;"></button>
+        <button type="button" data-bs-target="#galeria-viajes" data-bs-slide-to="6" class="rounded-circle" style="width: 10px; height: 10px;"></button>
+        <button type="button" data-bs-target="#galeria-viajes" data-bs-slide-to="7" class="rounded-circle" style="width: 10px; height: 10px;"></button>
+
+    </div>
+
+    <div class="carousel-inner h-100">
+
+        <div class="carousel-item active h-100">
+            <img src="IMGS/3.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="Explora">
+            <div class="carousel-caption d-none d-md-block mb-5 bg-dark bg-opacity-50 rounded-4 p-4">
+                <h2 class="display-4 fw-bold text-white">Explora el Mundo</h2>
+                <p class="fs-5 text-white">Experiencias inolvidables diseñadas para ti.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item h-100">
+            <img src="IMGS/4.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="Rutas">
+            <div class="carousel-caption d-none d-md-block mb-5 bg-dark bg-opacity-50 rounded-4 p-4">
+                <h2 class="display-4 fw-bold text-white">Nuevas Rutas</h2>
+                <p class="fs-5 text-white">Descubre destinos mágicos cada mes.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item h-100">
+            <img src="IMGS/5.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="Aventura">
+            <div class="carousel-caption d-none d-md-block mb-5 bg-dark bg-opacity-50 rounded-4 p-4">
+                <h2 class="display-4 fw-bold text-white">Tu Próxima Aventura</h2>
+                <p class="fs-5 text-white">La comodidad y seguridad que buscas al viajar.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item h-100">
+            <img src="IMGS/6.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="Naturaleza">
+            <div class="carousel-caption d-none d-md-block mb-5 bg-dark bg-opacity-50 rounded-4 p-4">
+                <h2 class="display-4 fw-bold text-white">Conecta con la Naturaleza</h2>
+                <p class="fs-5 text-white">Paisajes que te dejarán sin aliento.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item h-100">
+            <img src="IMGS/7.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="Recuerdos">
+            <div class="carousel-caption d-none d-md-block mb-5 bg-dark bg-opacity-50 rounded-4 p-4">
+                <h2 class="display-4 fw-bold text-white">Crea Recuerdos</h2>
+                <p class="fs-5 text-white">Viajes familiares con atención personalizada.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item h-100">
+            <img src="IMGS/8.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="Cultura">
+            <div class="carousel-caption d-none d-md-block mb-5 bg-dark bg-opacity-50 rounded-4 p-4">
+                <h2 class="display-4 fw-bold text-white">Cultura y Tradición</h2>
+                <p class="fs-5 text-white">Conoce la historia detrás de cada pueblo mágico.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item h-100">
+            <img src="IMGS/9.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="Yesi Tours">
+            <div class="carousel-caption d-none d-md-block mb-5 bg-dark bg-opacity-50 rounded-4 p-4">
+                <h2 class="display-4 fw-bold text-white">Yesi Tours</h2>
+                <p class="fs-5 text-white">Tu mejor aliado en turismo y compras.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item h-100">
+            <img src="IMGS/10.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="Yesi Tours">
+            <div class="carousel-caption d-none d-md-block mb-5 bg-dark bg-opacity-50 rounded-4 p-4">
+                <h2 class="display-4 fw-bold text-white">Momentos que Inspiran</h2>
+                <p class="fs-5 text-white">Cada viaje es una nueva historia que contar.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#galeria-viajes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#galeria-viajes" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#galeria-viajes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#galeria-viajes" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+
+    <main class="container bg-white rounded mt-5" id="VIAJES">
+        <div class="row justify-content-center">
+            <div class="col-md-9 text-center">
+                <h2 class="fw-bold mb-4 border-bottom border-2 d-inline-block pb-2 border-danger text-navy p-4">Bienvenido a Yesi Tours</h2>
+                <p class="lead text-secondary lh-lg">
+                    En <strong class="text-dark border-bottom">Yesi Tours</strong>, nos dedicamos a convertir tus viajes en recuerdos para toda la vida.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <div class="container">
+        <h2 class="display-3 text-center mb-4 p-4 text-navy" id="oferta">Nuestros Próximos Viajes</h2>
+        <div class="row g-4 justify-content-center">
+
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/isla.jpeg" class="card-img-top" alt="Isla Lobos">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Isla Lobos</h5>
+                        <p class="card-text flex-grow-1 small">Aguas cristalinas y arena blanca perfectas para snorkel.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Isla Lobos" data-img="IMGS/isla.jpeg" data-info="Paraíso marino." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 12 de Abril">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 12 de Abril</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/acuario1.jpeg" class="card-img-top" alt="Acuario">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Acuario Michin</h5>
+                        <p class="card-text flex-grow-1 small">Vida marina fascinante y ambiente familiar.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Acuario Michin" data-img="IMGS/acuario1.jpeg" data-info="Océano y aprendizaje." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 17 de Abril">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 17 de Abril</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/chig.jpeg" class="card-img-top" alt="Chignahuapan">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Chignahuapan + Zacatlan</h5>
+                        <p class="card-text flex-grow-1 small">Pueblos de tradición, cascadas y aroma a manzanas.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Chignahuapan" data-img="IMGS/chig.jpeg" data-info="Tradición y neblina." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 18 de Abril">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 18 de Abril</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/meco2.jpeg" class="card-img-top" alt="Meco">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Cascada el Meco</h5>
+                        <p class="card-text flex-grow-1 small">Aguas turquesa rodeadas de selva tropical.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Cascada el Meco" data-img="IMGS/meco2.jpeg" data-info="Selva y cascadas." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 19 de Abril">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 19 de Abril</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/africam.jpeg" class="card-img-top" alt="Africam">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Africam Safari</h5>
+                        <p class="card-text flex-grow-1 small">Recorrido entre animales exóticos y aventura salvaje.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Africam Safari" data-img="IMGS/africam.jpeg" data-info="Vida salvaje." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 25 de Abril">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 25 de Abril</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/acuario.jpeg" class="card-img-top" alt="Acuario">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Acuario Michin</h5>
+                        <p class="card-text flex-grow-1 small">Vida marina fascinante y ambiente familiar.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Acuario Michin" data-img="IMGS/acuario.jpeg" data-info="Océano y aprendizaje." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 25 de Abril">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 25 de Abril</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/biosfera.jpeg" class="card-img-top" alt="Biosfera">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Biosfera el Cielo</h5>
+                        <p class="card-text flex-grow-1 small">Paraíso natural de selva y gran biodiversidad.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Biosfera el Cielo" data-img="IMGS/biosfera.jpeg" data-info="Naturaleza pura." data-duracion=" ⏱ Duración: 2 días" data-salida=" 📅 Salida: 25 de Abril">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 25 de Abril</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/huasca.jpeg" class="card-img-top" alt="Huasca">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Huasca de Ocampo</h5>
+                        <p class="card-text flex-grow-1 small">Bosques mágicos y los famosos prismas basálticos.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Huasca" data-img="IMGS/huasca.jpeg" data-info="Prismas y magia." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 2 de Mayo">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 2 de Mayo</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/xilitla.jpeg" class="card-img-top" alt="Xilitla">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Xilitla</h5>
+                        <p class="card-text flex-grow-1 small">Jardín surrealista de Edward James en la selva.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Xilitla" data-img="IMGS/xilitla.jpeg" data-info="Surrealismo." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 3 de Mayo">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 3 de Mayo</div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/grutaspa.jpeg" class="card-img-top" alt="Grutas Spa">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Gruta Spa</h5>
+                        <p class="card-text flex-grow-1 small">Relajante oasis de aguas termales.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Gruta Spa" data-img="IMGS/grutaspa.jpeg" data-info="Aguas termales." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 8 de Mayo">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 8 de Mayo</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/Nacimiento.jpeg" class="card-img-top" alt="Tamuin">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Nacimiento de Tamuin</h5>
+                        <p class="card-text flex-grow-1 small">Manantiales de aguas cristalinas para relajarse.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Nacimiento" data-img="IMGS/Nacimiento.jpeg" data-info="Aguas cristalinas." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 10 de Mayo">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 10 de Mayo</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/xochimilco.jpeg" class="card-img-top" alt="Xochimilco">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Xochimilco</h5>
+                        <p class="card-text flex-grow-1 small">Coloridas trajineras y canales llenos de vida.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Xochimilco" data-img="IMGS/xochimilco.jpeg" data-info="Trajineras y música." data-duracion="  ⏱ Duración: 1 día" data-salida=" 📅 Salida: 16 de Mayo">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 16 de Mayo</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/Meco.jpeg" class="card-img-top" alt="Meco">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Cascada el Meco</h5>
+                        <p class="card-text flex-grow-1 small">Majestuosa caída de agua en su máximo esplendor.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Cascada el Meco" data-img="IMGS/Meco.jpeg" data-info="Imponente turquesa." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 17 de Mayo">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 17 de Mayo</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/pinal.jpeg" class="card-img-top" alt="Pinal">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Pinal de Amoles</h5>
+                        <p class="card-text flex-grow-1 small">Montañas cubiertas de neblina y miradores.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Pinal de Amoles" data-img="IMGS/pinal.jpeg" data-info="Neblina y altura." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 23 de Mayo">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 23 de Mayo</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/cuetzalan.jpeg" class="card-img-top" alt="Cuetzalan">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Cuetzalan</h5>
+                        <p class="card-text flex-grow-1 small">Encantador pueblo mágico entre montañas y neblina.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Cuetzalan" data-img="IMGS/cuetzalan.jpeg" data-info="Neblina y montañas." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 23 de Mayo">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 23 de Mayo</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/valle.jpeg" class="card-img-top" alt="Valle">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Valle de Bravo</h5>
+                        <p class="card-text flex-grow-1 small">Lago rodeado de bosques y calles encantadoras.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Valle de Bravo" data-img="IMGS/valle.jpeg" data-info="Lago y bosque." data-duracion="⏱ Duración: 1 día" data-salida=" 📅 Salida: 30 de Mayo">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 30 de Mayo</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/grutas1.jpeg" class="card-img-top" alt="Grutas de Tolantongo">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Grutas de Tolantongo</h5>
+                        <p class="card-text flex-grow-1 small">Hermosas aguas termales</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Grutas de Tolantongo" data-img="IMGS/grutas1.jpeg" data-info="Aguas Termales" data-duracion="⏱ Duración: 1 día" data-salida=" 📅 Salida: 6 de Junio">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 6 de Junio</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/veracruz.jpeg" class="card-img-top" alt="Veracruz">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Puerto de Veracruz + Acuario</h5>
+                        <p class="card-text flex-grow-1 small">Vida marina en un solo viaje</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Puerto de Veracruz + Acuario" data-img="IMGS/veracruz.jpeg" data-info="Aprende sobre la fauna del mar" data-duracion="⏱ Duración: 1 día" data-salida=" 📅 Salida: 13 de Junio">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 13 de Junio</div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/chig1.jpeg" class="card-img-top" alt="Chignahuapan">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Chignahuapan + Zacatlan</h5>
+                        <p class="card-text flex-grow-1 small">Pueblos de tradición, cascadas y aroma a manzanas.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Chignahuapan" data-img="IMGS/chig1.jpeg" data-info="Tradición y neblina." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 13 de Junio">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 13 de Junio</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/cascada.jpeg" class="card-img-top" alt="Cascada Honey">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Cascada Paraiso Honey</h5>
+                        <p class="card-text flex-grow-1 small">Espectacular cascada escondida entre naturaleza.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Cascada Paraiso Honey" data-img="IMGS/cascada.jpeg" data-info="Cascadas y naturaleza." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 20 de Junio">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 20 de Junio</div>
+                </div>
+            </div>
+
+           <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/xilitla1.jpeg" class="card-img-top" alt="Xilitla">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Xilitla</h5>
+                        <p class="card-text flex-grow-1 small">Jardín surrealista de Edward James en la selva.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Xilitla" data-img="IMGS/xilitla1.jpeg" data-info="Surrealismo." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 21 de Junio">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 21 de Junio</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/taxco.jpeg" class="card-img-top" alt="Taxco">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Taxco</h5>
+                        <p class="card-text flex-grow-1 small">Encantador pueblo colonial de calles empedradas y plata brillante.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Taxco" data-img="IMGS/taxco.jpeg" data-info="Tradiciones" data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 27 de Junio">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 27 de Junio</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/teo.jpeg" class="card-img-top" alt="Teotihuacán">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Teotihuacán + Basilica</h5>
+                        <p class="card-text flex-grow-1 small">Majestuosas pirámides que sorprenderan tu vida.
+</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Teotihuacán + Basilica" data-img="IMGS/teo.jpeg" data-info="Piramides." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 27 de Junio">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 27 de Junio</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/orizaba1.jpeg" class="card-img-top" alt="Orizaba">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Orizaba</h5>
+                        <p class="card-text flex-grow-1 small"> Teleféricos, hermosos paisajes montañosos y experiencias inolvidables.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Orizaba" data-img="IMGS/orizaba1.jpeg" data-info="Paisajes" data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 1 de Agosto">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 1 de Agosto</div>
+                </div>
+            </div> 
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/grutas1.jpeg" class="card-img-top" alt="Grutas de Tolantongo">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Grutas de Tolantongo</h5>
+                        <p class="card-text flex-grow-1 small">Hermosas aguas termales</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Grutas de Tolantongo" data-img="IMGS/grutas1.jpeg" data-info="Aguas termales" data-duracion="⏱ Duración: 1 día" data-salida=" 📅 Salida: 1 de Agosto">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 1 de Agosto</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/veracruz.jpeg" class="card-img-top" alt="Veracruz">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Puerto de Veracruz + Acuario</h5>
+                        <p class="card-text flex-grow-1 small">Vida marina en un solo viaje</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Puerto de Veracruz + Acuario" data-img="IMGS/veracruz.jpeg" data-info="Aprende sobre la fauna del mar" data-duracion="⏱ Duración: 1 día" data-salida=" 📅 Salida: 22 de Agosto">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 22 de Agosto</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/xilitla1.jpeg" class="card-img-top" alt="Xilitla">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Xilitla</h5>
+                        <p class="card-text flex-grow-1 small">Jardín surrealista de Edward James en la selva.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Xilitla" data-img="IMGS/xilitla1.jpeg" data-info="Surrealismo." data-duracion=" ⏱ Duración: 1 día" data-salida=" 📅 Salida: 29 de Agosto">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 29 de Agosto</div>
+                </div>
+            </div>
+             
+
+            <div class="col-6 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="IMGS/chiapas.jpeg" class="card-img-top" alt="Chiapas">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-vino fw-bold">Chiapas</h5>
+                        <p class="card-text flex-grow-1 small">Selvas y zonas arqueológicas milenarias.</p>
+                        <button class="btn btn-vino w-100" data-bs-toggle="modal" data-bs-target="#modalViaje" data-titulo="Chiapas" data-img="IMGS/chiapas.jpeg" data-info="Cultura y arqueología." data-duracion=" ⏱ Duración: 5 días" data-salida=" 📅 Salida: 15 de Julio">Más información</button>
+                    </div>
+                    <div class="card-footer small text-center">Salida: 15 de Julio</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalViaje" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title fw-bold" id="tituloModal"></h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center" style="background-color: var(--beige);">
+                    <img id="imgModal" src="" class="img-fluid rounded shadow-sm mb-3">
+                    <p id="infoModal" class="fw-bold text-navy"></p>
+                    <ul class="list-group text-start shadow-sm">
+                        <li class="list-group-item" id="duracionModal"></li>
+                        <li class="list-group-item" id="salidaModal"></li>
+                    </ul>
+                </div>
+                <div class="modal-footer" style="background-color: var(--sky-blue);">
+                    <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a class="btn btn-vino" id="btnWhatsapp" href="https://wa.me/528334288206" target="_blank">Mandar mensaje</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <p class="mb-0 fw-bold">&copy; 2026 Yesi Tours - Compras y Turismo.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="forms.js"></script>
+</body>
+
+</html>
